@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora iPhone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .calculadora {
+            width: 242px;
+            height: 472px;
+            background-color: #000000;
+            border-radius: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .display {
+            height: 70px;
+            background-color: #000000;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50%;
+            background-color: #505050;
+            color: white;
+            height: 60px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn:active {
+            background-color: #7c7c7c;
+        }
+
+        .funcao  {
+            background-color: #ff9500;
+        }
+
+        .funcao:active {
+            background-color: #d98100;
+        }
+
+        .funcao2 {
+            background-color: #d4d4d2;
+            color: black;
+        }
+
+        .funcao2:active {
+            background-color: #000000;
+        }
+
+        .num {
+            background-color: #333;
+        }
+
+        .num.zero {
+            grid-column: span 2;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="display">
+            <span id="result">0</span>
+        </div>
+        <div class="buttons">
+            <button class="btn funcao2">AC</button>
+            <button class="btn funcao2">+/-</button>
+            <button class="btn funcao2">%</button>
+            <button class="btn funcao">÷</button>
+
+            <button class="btn num">7</button>
+            <button class="btn num">8</button>
+            <button class="btn num">9</button>
+            <button class="btn funcao">×</button>
+
+            <button class="btn num">4</button>
+            <button class="btn num">5</button>
+            <button class="btn num">6</button>
+            <button class="btn funcao 2">-</button>
+
+            <button class="btn num">1</button>
+            <button class="btn num">2</button>
+            <button class="btn num">3</button>
+            <button class="btn funcao 2">+</button>
+
+            <button class="btn num zero">0</button>
+            <button class="btn num">.</button>
+            <button class="btn funcao 2">=</button>
+        </div>
+    </div>
+</body>
+</html>
